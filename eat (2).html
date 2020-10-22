@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh" style="height: 100%;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <title>eat</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/mdui/0.4.2/css/mdui.min.css">
+    <link rel="stylesheet" href="https://gcunetworkcenter.gitee.io/self-cdn/cdn/dropload/v0.9.1/css/dropload.min.css">
+    <style id="__WXWORK_INNER_SCROLLBAR_CSS">::-webkit-scrollbar { width: 12px !important; height: 12px !important; }::-webkit-scrollbar-track:vertical {  }::-webkit-scrollbar-thumb:vertical { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } :-webkit-scrollbar-track:horizontal {  }::-webkit-scrollbar-thumb:horizontal { background-color: rgba(136, 141, 152, 0.5) !important; border-radius: 10px !important; background-clip: content-box !important; border:2px solid transparent !important; } ::-webkit-resizer { display: none !important; }.mdui-typo-headline h3{
+    font-family: "楷体";
+}
+.mdui-card-content{
+
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+@-webkit-keyframes mymove {
+    55% {font-size: 20px;}
+    50% {text-shadow: 5px 5px 10px red;}
+}
+​
+/* Standard syntax */
+@keyframes mymove {
+    30% {font-size: 20px;}
+    50% {text-shadow: 5px 5px 10px blue;}
+}
+
+</style></head>
+<body class="mdui-bottom-nav-fixed" >
+</div>
+<div class="mdui-appbar">
+    <div class="mdui-toolbar mdui-color-black">
+      <a  class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+      <a  class="mdui-typo-headline"><h3>今天要吃什么</h3></a>
+      <div class="mdui-toolbar-spacer"></div>
+      <a href="#" class="mdui-btn"><button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-pink" onclick="breakfast()" >早餐</button></a>
+      <a href="#" class="mdui-btn"><button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-green" onclick="lunch()">午餐</button></a>
+      <a href="#" class="mdui-btn"><button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-blue"  onclick="dinner()">晚餐</button></a>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+      <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+    </div>
+  </div>
+  <div class="mdui-bottom-nav">
+    <a href="javascript:;" class="mdui-ripple mdui-bottom-nav-active">
+      <i class="mdui-icon material-icons">history</i>
+      <label>Recents</label>
+    </a>
+    <a href="javascript:;" class="mdui-ripple">
+      <i class="mdui-icon material-icons">favorite</i>
+      <label>Favorites</label>
+    </a>
+    <a href="javascript:;" class="mdui-ripple">
+      <i class="mdui-icon material-icons">location_on</i>
+      <label>Nearby</label>
+    </a>
+  </div>
+  <!--
+
+  -->
+  <div class="mdui-container mdui-m-t-5" style="height:100%;">
+    <div class="mdui-card" style="height:75%;">
+        <div style="height:70%;" class="mdui-card-content">
+            <h1 id="fillbox">今天<span class="time" id="c"></span><span class="w" id="what">吃神马</span></h1>
+            
+        </div>
+        <!-- 卡片的按钮 -->
+        <body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+        <div class="mdui-card-actions">
+        </div>
+    </div>
+</div>
+<div class="mdui-container mdui-p-t-5 mdui-theme-primary-indigo mdui-theme-accent-green">
+  <button class="mdui-btn mdui-color-theme-accent" mdui-menu="{target: '#example-1'}">菜谱</button>
+  <ul class="mdui-menu" id="example-1">
+    <li class="mdui-menu-item">
+      <a href="javascript:;" class="mdui-ripple" onclick="cake()">吃面包</a>
+    </li>
+    <li class="mdui-menu-item">
+      <a href="javascript:;"class="mdui-ripple" onclick="milk()">喝牛奶</a>
+    </li>
+    <li class="mdui-divider"></li>
+    <li class="mdui-menu-item">
+      <a href="javascript:;" class="mdui-ripple" onclick="pot()">吃火锅</a>
+    </li>
+    <li class="mdui-divider"></li>
+    <li class="mdui-menu-item">
+      <a href="javascript:;" class="mdui-ripple" onclick="barbecue()">吃烧烤</a>
+    </li>
+  </ul>
+</div>
+
+<script src="https://cdn.bootcss.com/mdui/0.4.2/js/mdui.min.js"></script>
+<script src="https://gcunetworkcenter.gitee.io/self-cdn/cdn/jquery/v1.11.0/js/jquery.min.js"></script>
+<script src="https://gcunetworkcenter.gitee.io/self-cdn/cdn/dropload/v0.9.1/js/dropload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script type="text/javascript">
+    function breakfast(){
+      element=document.getElementById("c").innerHTML="早餐";
+      }
+      function lunch(){
+      element=document.getElementById("c").innerHTML="午餐";
+      }
+      function dinner(){
+      element=document.getElementById("c").innerHTML="晚餐";
+      }
+      function cake(){
+        element=document.getElementById("what").innerHTML="吃面包";
+      }
+      function milk(){
+        element=document.getElementById("what").innerHTML="喝牛奶";
+      }
+      function pot(){
+        element=document.getElementById("what").innerHTML="吃火锅";
+      }
+      function barbecue(){
+        element=document.getElementById("what").innerHTML="吃烧烤";
+      }
+      
+
+</script>
+</body></html>
